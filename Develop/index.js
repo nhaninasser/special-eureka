@@ -17,10 +17,50 @@ const questions = [
     {
         type: "input",
         name: "projectInstallation",
-        message: "Describe how to use your project",
+        message: "How do you install and run your project",
     },
     {
-       
+        type: "input",
+        name: "projectUsage",
+        message: "Describe how to use your project.",
+    },
+    {
+        type: "list",
+        name: "projectLicense",
+        choices: [
+            "Apache",
+            "GNU",
+            "MIT",
+            "ISC",
+            "Mozilla",
+            "None",
+        ]
+    },
+    {
+        type: "input",
+        name: "projectContributors",
+        message: "List the people who contributed to this project.",
+    },
+    {
+        type: "input",
+        name: "projectTests",
+        message: "Describe any tests for your project and how to run them.",
+    },
+    {
+        type: "inout",
+        name: "projectIssues",
+        message: "What would someone do if they had any issues with your project?",
+    },
+    {
+        type: "input",
+        name: "userGithub",
+        message: "What is your Github username?",
+    },
+    {
+        type: "input",
+        name: "userEmail",
+        message: "What is your email?"
+    }
 
 ];
 
