@@ -79,7 +79,33 @@ function init() {
         userGithub,
         userEmail
     }) => {
-  
+        const template = `# ${projectTitle}    
+    ## Table of Contents
+    * [Description](#Description)
+    * [Installation](#Installation)
+    * [Usage](#Usage)
+    * [License](#License)
+    * [Contributors](#Contributors)
+    * [Tests](#Tests)
+    * [Issues](#Issues)
+    * [Contact](#Contact)
+    ## Description
+    ${projectDescription}
+    ## Installation
+    ${projectInstallation}
+    ## Usage
+    ${projectUsage}
+    ## License
+    ${projectLicense}
+    ## Contributors
+    ${projectContributors}
+    ## Tests
+    ${projectTests}
+    ## Issues
+    ${projectIssues}
+    ## Contact
+    * GitHub: ${userGithub}
+    * Email: ${userEmail}`;
         createNewFile(title, template);
         }
         );
