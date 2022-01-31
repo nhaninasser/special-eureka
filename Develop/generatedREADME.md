@@ -1,4 +1,4 @@
-# title    
+# ReadME Generator    
     ## Table of Contents
     * [Description](#Description)
     * [Installation](#Installation)
@@ -13,15 +13,15 @@
     ## Installation
     npm init npm install inquirer
     ## Usage
-    node index in the terminal
+    npm index in terminal
     ## License
-    None
+    Mozilla
     ## Contributors
-    me
+    Nasser Nasser
     ## Tests
     none
     ## Issues
-    contact me
+    contact me nhani.gmail.com
     ## Contact
-    * GitHub: nhani.nasser
+    * GitHub: nhaninasser
     * Email: nhani.nasser@gmail.com
