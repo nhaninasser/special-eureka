@@ -1,14 +1,14 @@
 {
-  "name": "static-site",
+  "name": "readme-gerator",
   "version": "1.0.0",
-  "description": "",
+  "description": "A way to generate a Professional README(",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Nasser Nasser",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^6.3.1"
+    "inquirer": "^6.5.2"
   }
 }

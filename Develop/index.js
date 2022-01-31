@@ -64,11 +64,6 @@ const questions = [
 
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    
-}
-
 // TODO: Create a function to initialize app
 function init() {
     return inquirer.prompt(questions)
@@ -84,6 +79,44 @@ function init() {
         userGithub,
         userEmail
     }) => {
+        const template = `# ${projectTitle}    
+    ## Table of Contents
+    * [Description](#Description)
+    * [Installation](#Installation)
+    * [Usage](#Usage)
+    * [License](#License)
+    * [Contributors](#Contributors)
+    * [Tests](#Tests)
+    * [Issues](#Issues)
+    * [Contact](#Contact)
+    ## Description
+    ${projectDescription}
+    ## Installation
+    ${projectInstallation}
+    ## Usage
+    ${projectUsage}
+    ## License
+    ${projectLicense}
+    ## Contributors
+    ${projectContributors}
+    ## Tests
+    ${projectTests}
+    ## Issues
+    ${projectIssues}
+    ## Contact
+    * GitHub: ${userGithub}
+    * Email: ${userEmail}`;
+        createNewFile(title, template);
+        }
+        );
+        function createNewFile(fileName, data) {
+            fs.writeFile('./generatedREADME.md', data, err => {
+                if (err) {
+                    console.log(err)
+                }
+                console.log('README has been generated');
+            })
+        }
 }
 
 // Function call to initialize app
