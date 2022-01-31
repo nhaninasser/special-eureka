@@ -65,10 +65,26 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    return inquirer.prompt(questions)
+    .then(({
+        projectTitle,
+        projectDescription,
+        projectInstallation,
+        projectUsage,
+        projectLicense,
+        projectContributors,
+        projectTests,
+        projectIssues,
+        userGithub,
+        userEmail
+    }) => {
+}
 
 // Function call to initialize app
 init();
