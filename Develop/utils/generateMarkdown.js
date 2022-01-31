@@ -32,7 +32,6 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  function renderLicenseLink(license) {
     const licenseRender = Number(license);
     switch (licenseRender) {
       case 1: {
@@ -58,18 +57,82 @@ function renderLicenseLink(license) {
       default: {
         return ''
       };
+    }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
+  const licenseRender = Number(license);
+  switch (licenseRender) {
+    case 1: {
+      return `\n
+      Licensed under Apache License 2.0.
+      \n`
+    };
+      break;
+    case 2: {
+      return `\n
+      Licensed under GNU General Public License (GPL v3)
+      \n`
+    };
+      break;
+    case 3: {
+      return `\n
+      Licensed under the MIT license.
+      \n`
+    };
+      break;
+    case 4: {
+      return `\n
+      Licensed under ISC.
+      \n`
+    };
+      break;
+    case 5: {
+      return `\n
+      Licensed under Mozilla Public License 2.0.
+      \n`
+    };
+      break;
+      default: {
+      return ''
+      };
+   }
+}   
+    
   
-}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-
+  let bdg = renderLicenseBadge(data.license);
+  let licenseSec = renderLicenseSection(data.license);
+  let licenseLink = renderLicenseLink(data.license);
+  return `
+  # ${data.title}
+  ${bdg}
+  ## Description
+  ${data.description}
+  ## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributions](#contributions)
+  - [Testing](#testing)
+  - [License](#license)
+  ## Installation
+  ${data.install}
+  ## Usage
+  ${data.usage}
+  ## Contributions
+  ${data.contribute}
+  ### nhani.nasser@gmail.com
+  ### https://github.com/nhaninasser
+  ## Testing
+  ${data.test}
+  ## License
+  ${licenseSec}
+  \nFind a copy of this license here:\n
+  ${licenseLink}
 `;
 }
 
